@@ -1,0 +1,30 @@
+#Presentation{
+    min-height:100vh;
+    border:1px solid black;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    background-color:gray;
+    text-align:center;
+}
+
+#Presentation h1{
+    text-transform:uppercase;
+    font-family: 'Montserrat';
+}
+
+#Presentation p{
+    font-family: 'Cambria';
+    font-style: italic;
+    font-size:1.1rem;
+}
+
+.link-container a{
+    color:#EE322C;
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Cambria';
+    font-size:1.3rem;
+
+}

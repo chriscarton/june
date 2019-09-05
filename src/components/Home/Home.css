@@ -1,0 +1,38 @@
+
+#Home{
+    border:1px solid black;
+    min-height:85vh;
+    display:grid;
+    align-content: center;
+    justify-content: center;
+    position:relative;
+}
+
+#Home iframe{
+    border:2px dashed black;
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0px;
+    z-index:0;
+}
+
+.vp-controls-wrapper{
+    display:none;
+}
+
+#Punchline{
+    color:white;
+    font-size:2.2rem;
+    z-index:2;
+}
+
+#Punchline p{
+    margin:0;
+    font-family: "Montserrat";
+}
+
+#Punchline small{
+    text-transform: uppercase;
+    font-size:0.8rem;
+}
