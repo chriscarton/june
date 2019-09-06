@@ -4,12 +4,20 @@
   position:absolute;
 }
 
+#fakeMenu{
+  position:absolute;
+  border:2px dashed white;
+  a{
+    color:aqua;
+  }
+}
+
 #menuTrigger{
   position:fixed;
   top:0px;
   right:0px;
-  width:100px;
-  height:100px;
+  width:140px;
+  height:140px;
   background-color:#EE322C;
   display:flex;
   align-items: center;

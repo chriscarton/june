@@ -1,0 +1,78 @@
+
+//Couleurs XD "Réalisations rollover"
+
+$white:#ffffff;
+$dark-blue:#0F202F;
+$red-pink:#EF282C;
+//Le light gray semble incorrecte (valeur d'opacity à 25)
+$light-gray:#000000;
+$gray:#B7B7B7;
+$silver:#F2EEEA;
+$deep-blue:#040D1B;
+$orange-red:#FC1A1C;
+//Pareil à 30%
+$light-pink:#EF282C;
+
+#Realisations{
+
+    .header-container{
+        width:85%;
+        margin-left:auto;
+        margin-right:auto;
+        .header{
+            position:absolute;
+            z-index:1;
+            .logo{
+                padding-top:68px;
+                img{
+                    max-width: 260px;
+                }
+            }
+        }
+    }
+
+
+    .ban{
+        background-image: url(../../assets/img/background-gradient.png);
+        background-size:cover;
+        min-height:75vh;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        .content{
+            border:1px dashed white;
+            color:white;
+            .encart{
+                border:1px dashed white;
+            }
+            .camera-container{
+                text-align: center;
+            }
+            .buttons{
+                border:1px dashed white;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                min-height:75px;
+                a{
+                    width:260px;
+                    height:101px;
+                    text-transform:uppercase;
+                    color:white;
+                    background-color:$red-pink;
+                    display:flex;
+                    align-items:center;
+                    justify-content: center;
+                    text-align: center;
+                    font-family: 'Montserrat';
+                    font-size:37px;
+                    //font: SemiBold 30px/37px Montserrat;
+
+                }
+                a:first-child{
+                    margin-right:230px;
+                }
+            }
+        }
+    }
+}

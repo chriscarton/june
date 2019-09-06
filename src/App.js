@@ -1,43 +1,44 @@
 import React from 'react';
-import Home from './components/Home/Home.js';
+
 import Menu from './components/Menu/Menu.js';
-import Presentation from './components/Presentation/Presentation.js';
+import Footer from './components/Footer/Footer.js';
+
+//Importation des pages
+import Home from './pages/Home/Home.js';
+import Realisations from './pages/Realisations/Realisations.js';
+
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 //import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
+    
+    <Router>
+      <div className="App">
 
-      <Menu/>
-      <Home/>
-      <Presentation/>
-      <div>
-        <h1>Autre chose...</h1>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo suscipit molestiae unde. Ex vero deleniti voluptatibus quos, exercitationem ad incidunt excepturi illo corporis atque ratione nostrum sequi fuga nihil expedita?
+        <Menu/>
+        <div id="fakeMenu">
+          <Link to="/">Accueil</Link>
+          <br/>
+          <Link to="/realisations">Réalisations</Link>
+        </div>
+        <div id="Content">
+          <Switch>
+            <Route path="/" exact component={Home}/>
+            <Route path="/realisations" exact component={Realisations}/>
+            <Route path="/realisations/:id" exact component={Realisations}/>
+
+          </Switch>
+        </div>
+        <Footer/>
       </div>
+    </Router>
 
-      <p>Voici ma nouvelle App</p>
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      <script src="https://player.vimeo.com/api/player.js"></script>
-      <script>
-        //Pour les vidéos
-      </script>
-    </div>
+      
+      
+      
   );
 }
 
