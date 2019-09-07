@@ -13,6 +13,21 @@ $orange-red:#FC1A1C;
 //Pareil à 30%
 $light-pink:#EF282C;
 
+//Peut-être mettre ceci dans App.scss du coup...
+.btn{
+    width:260px;
+    height:101px;
+    text-transform:uppercase;
+    color:white;
+    background-color:$red-pink;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size:37px;
+}
+
 #Realisations{
 
     .header-container{
@@ -35,18 +50,36 @@ $light-pink:#EF282C;
     .ban{
         background-image: url(../../assets/img/background-gradient.png);
         background-size:cover;
-        min-height:75vh;
+        min-height:100vh;
         display:flex;
         align-items: center;
         justify-content: center;
         .content{
-            border:1px dashed white;
+            border:1px solid blue;
+            //Ça, c'est un peu tricky : 
+            /*margin-top:-100px;*/
+            padding-top:50px;
+            padding-bottom:50px;
             color:white;
             .encart{
                 border:1px dashed white;
+                width:70vw;
+                margin-left:auto;
+                margin-right:auto;
+                h1{
+                    margin:0px;
+                    font-family: 'Crimson Text';
+                    font-size:86px;
+                }
+                p{
+                    font-family: 'Crimson Text';
+                    font-size: 36px;
+                    font-style: italic;
+                }
             }
             .camera-container{
                 text-align: center;
+                padding:15px;
             }
             .buttons{
                 border:1px dashed white;
@@ -54,25 +87,56 @@ $light-pink:#EF282C;
                 align-items: center;
                 justify-content: center;
                 min-height:75px;
-                a{
-                    width:260px;
-                    height:101px;
-                    text-transform:uppercase;
-                    color:white;
-                    background-color:$red-pink;
-                    display:flex;
-                    align-items:center;
-                    justify-content: center;
-                    text-align: center;
-                    font-family: 'Montserrat';
-                    font-size:37px;
-                    //font: SemiBold 30px/37px Montserrat;
-
-                }
+                
                 a:first-child{
                     margin-right:230px;
                 }
             }
+        }
+    }
+
+$size:475px;
+
+    #Portfolio{
+        background-color:yellow;
+        /*min-height:100vh;*/
+        min-height:1425px;
+        .centered{
+            position:relative;
+            width:$size*2;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .entries{
+
+            background-color:pink;
+            position:absolute;
+            top:(-$size/2)+50px;
+
+            .entry{
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+                 > div{
+                width:$size;
+                height:$size;
+                border:1px dashed black;
+                display:grid;
+                align-content: center;
+                justify-content: center;
+                &.media{
+                    background-color:$gray;
+                    background-image: url(../../assets/img/picture.png);
+                    background-position:center center;
+                    background-repeat: no-repeat;
+                }
+                &.cartouche{
+                    background-color:$silver;
+                    
+                }
+            }
+            }
+
+           
         }
     }
 }
