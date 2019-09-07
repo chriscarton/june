@@ -1,4 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './Footer.scss';
+
+//Icônes socials : 
+import linkedin from '../../assets/img/socials/linkedin.png';
+import vimeo from '../../assets/img/socials/vimeo.png';
+import instagram from '../../assets/img/socials/instagram.png';
+import facebook from '../../assets/img/socials/facebook.png';
+
 
 export class Footer extends Component {
     render() {
@@ -28,10 +36,18 @@ export class Footer extends Component {
                         </div>
 
                         <div className="socials">
-                            <a>Linked</a>
-                            <a>Vimeo</a>
-                            <a>Insta</a>
-                            <a>Facebook</a>
+                            <a>
+                                <img src={linkedin}/>
+                            </a>
+                            <a>
+                                <img src={vimeo} />
+                            </a>
+                            <a>
+                                <img src={instagram} />
+                            </a>
+                            <a>
+                                <img src={facebook} />
+                            </a>
                         </div>
 
                     </div>
@@ -44,7 +60,10 @@ export class Footer extends Component {
                             <a>études de cas</a>
                         </nav>
 
-                        <p>Envie de croiser vos idées avec nos expertises, prenons <b>contact pour échanger sur vos projets</b></p>
+                        <p className="accroche">
+                            Envie de croiser vos idées avec nos expertises, prenons <br/> 
+                            <a className="contact">contact</a> pour échanger sur vos projets
+                        </p>
 
                         <div className="mentions">
                             <a>mentions légales</a> @MrsJune 2019

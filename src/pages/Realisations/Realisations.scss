@@ -1,17 +1,7 @@
 
 //Couleurs XD "Réalisations rollover"
 
-$white:#ffffff;
-$dark-blue:#0F202F;
-$red-pink:#EF282C;
-//Le light gray semble incorrecte (valeur d'opacity à 25)
-$light-gray:#000000;
-$gray:#B7B7B7;
-$silver:#F2EEEA;
-$deep-blue:#040D1B;
-$orange-red:#FC1A1C;
-//Pareil à 30%
-$light-pink:#EF282C;
+@import '../../variables.scss';
 
 //Peut-être mettre ceci dans App.scss du coup...
 .btn{
@@ -98,9 +88,9 @@ $light-pink:#EF282C;
 $size:475px;
 
     #Portfolio{
-        background-color:yellow;
-        /*min-height:100vh;*/
-        min-height:1425px;
+        background-color:white;
+        //La hauteur totale des carrés plus un ajustement "à la main"
+        min-height:1425+113px;
         .centered{
             position:relative;
             width:$size*2;
@@ -108,32 +98,35 @@ $size:475px;
             margin-right:auto;
         }
         .entries{
-
-            background-color:pink;
             position:absolute;
             top:(-$size/2)+50px;
-
             .entry{
                 display:grid;
                 grid-template-columns: 1fr 1fr;
                  > div{
-                width:$size;
-                height:$size;
-                border:1px dashed black;
-                display:grid;
-                align-content: center;
-                justify-content: center;
-                &.media{
-                    background-color:$gray;
-                    background-image: url(../../assets/img/picture.png);
-                    background-position:center center;
-                    background-repeat: no-repeat;
-                }
-                &.cartouche{
-                    background-color:$silver;
-                    
+                    width:$size;
+                    height:$size;
+                    border:1px dashed black;
+                    display:grid;
+                    align-content: center;
+                    justify-content: center;
+                    &.media{
+                        background-color:$gray;
+                        background-image: url(../../assets/img/picture.png);
+                        background-position:center center;
+                        background-repeat: no-repeat;
+                    }
+                    &.cartouche{
+                        background-color:$silver;
+                        
+                    }
                 }
             }
+            .btn-container{
+                display:flex;
+                justify-content: center;
+                margin-top:100px;
+                margin-bottom:100px;
             }
 
            

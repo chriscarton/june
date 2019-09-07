@@ -1,0 +1,88 @@
+@import '../../variables.scss';
+
+//Bon ok on va faire un fichier variables.scss
+footer#Footer{
+    background-color:$dark-blue;
+    color:white;
+    position:relative;
+    padding-top:177px;
+    padding-bottom:39px;
+
+    .etiquette{
+        position:absolute;
+        bottom:0px;
+        right:0px;
+    }
+
+    .grid{
+        display:grid;
+        grid-template-columns: 2fr 3fr;
+        border:1px dashed white;
+        width:85%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .col-1{
+        border:1px dashed aqua;
+        .block{
+            p{
+                font-family: 'Montserrat';
+                font-size:18px;
+                font-weight: bold;
+            }
+        }
+    }
+    .col-2{
+        border:1px dashed aqua;
+    }
+
+    .socials{
+        border:1px dashed pink;
+        display:flex;
+        a{
+            display:flex;
+            width:62px;
+            height:62px;
+            background-color:$red-pink;
+
+            align-items: center;
+            justify-content: center;
+            margin-right:16px;
+            img{
+                width:100%;
+                height:auto;
+            }
+        }
+    }
+    
+    .menu{
+        border:1px dashed white;
+        //La Mrs Eaves n'est pas disponible sur Google Fonts, 
+        //Je met une vieille georgia en remplacement
+        font-family: 'Mrs Eaves OT', 'georgia';
+        //Taille de la Mrs Eaves sur la maquette
+        //font-size:40px;
+        //Taille pour la georgia        
+        font-size:28px;
+        font-style: italic;
+        display:flex;
+        justify-content: space-between;
+        border:1px dashed red;
+
+        font-style: italic;
+    }
+
+    p.accroche{
+        font-size:25px;
+        margin-top:96px;
+        font-family: 'Montserrat';
+        border:1px solid green;
+        a.contact{
+            font-family: 'Mrs Eaves OT', 'georgia';
+            font-style: italic;
+            font-size: 28px;
+
+        }
+    }
+}

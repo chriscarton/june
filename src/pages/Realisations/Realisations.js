@@ -97,7 +97,7 @@ export default class Realisations extends Component {
                                     </div>
                                 </div>
                             )}
-                            <div className="button-container">
+                            <div className="btn-container">
                                 <a class="btn">
                                     MORE
                                 </a>
