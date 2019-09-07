@@ -3,40 +3,7 @@
 
 @import '../../variables.scss';
 
-//Peut-être mettre ceci dans App.scss du coup...
-.btn{
-    width:260px;
-    height:101px;
-    text-transform:uppercase;
-    color:white;
-    background-color:$red-pink;
-    display:flex;
-    align-items:center;
-    justify-content: center;
-    text-align: center;
-    font-family: 'Montserrat';
-    font-size:37px;
-}
-
 #Realisations{
-
-    .header-container{
-        width:85%;
-        margin-left:auto;
-        margin-right:auto;
-        .header{
-            position:absolute;
-            z-index:1;
-            .logo{
-                padding-top:68px;
-                img{
-                    max-width: 260px;
-                }
-            }
-        }
-    }
-
-
     .ban{
         background-image: url(../../assets/img/background-gradient.png);
         background-size:cover;
@@ -45,14 +12,12 @@
         align-items: center;
         justify-content: center;
         .content{
-            border:1px solid blue;
-            //Ça, c'est un peu tricky : 
-            /*margin-top:-100px;*/
+            //border:1px solid blue;
             padding-top:50px;
             padding-bottom:50px;
             color:white;
             .encart{
-                border:1px dashed white;
+                //border:1px dashed white;
                 width:70vw;
                 margin-left:auto;
                 margin-right:auto;
@@ -62,6 +27,7 @@
                     font-size:86px;
                 }
                 p{
+                    margin:0px;
                     font-family: 'Crimson Text';
                     font-size: 36px;
                     font-style: italic;
@@ -72,7 +38,7 @@
                 padding:15px;
             }
             .buttons{
-                border:1px dashed white;
+                //border:1px dashed white;
                 display:flex;
                 align-items: center;
                 justify-content: center;
@@ -98,8 +64,10 @@ $size:475px;
             margin-right:auto;
         }
         .entries{
-            position:absolute;
-            top:(-$size/2)+50px;
+            @media screen and (min-height:900px){
+                position:absolute;
+                top:(-$size/2)+50px;
+            }
             .entry{
                 display:grid;
                 grid-template-columns: 1fr 1fr;

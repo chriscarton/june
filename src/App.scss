@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import 'variables.scss';
 
 *{
   box-sizing: border-box;
@@ -16,18 +17,24 @@
   }
 }
 
-#menuTrigger{
-  position:fixed;
-  top:0px;
-  right:0px;
-  width:140px;
-  height:140px;
-  background-color:#EE322C;
-  display:flex;
-  align-items: center;
-  justify-content: center;
+
+
+/* 
+  Ceci est nouveau avec l'intégration de la page "Réalisations" 
+*/
+
+//Peut-être mettre ceci dans App.scss du coup...
+.btn{
+    width:260px;
+    height:101px;
+    text-transform:uppercase;
+    color:white;
+    background-color:$red-pink;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size:37px;
 }
 
-#menuTrigger a{
-  color:white;
-}

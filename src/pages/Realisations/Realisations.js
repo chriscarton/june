@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import "./Realisations.scss";
-import logo from '../../assets/img/logo.png';
 import camera from '../../assets/img/camera.png';
 
 
@@ -32,6 +31,11 @@ export default class Realisations extends Component {
         }
     }
 
+    componentDidMount() {
+        //Pour aller en haut de la page dès qu'on arrive sur celle-ci
+        window.scrollTo(0, 0);
+    }
+
     /*
 
         //hmmm je vais pas m'emmerder avec ça 
@@ -55,13 +59,6 @@ export default class Realisations extends Component {
         const entries = this.state.entries;
         return (
             <div id="Realisations">
-                <div className="header-container">
-                    <div className="header">
-                        <div className="logo">
-                            <img src={logo} alt="Logo" />
-                        </div>
-                    </div>
-                </div>
                 <div className="ban">
                     <div className="content">
                         <div className="encart">

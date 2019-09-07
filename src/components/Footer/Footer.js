@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Footer.scss';
+import { Link } from 'react-router-dom';
 
 //Icônes socials : 
 import linkedin from '../../assets/img/socials/linkedin.png';
@@ -53,10 +54,15 @@ export class Footer extends Component {
                     </div>
                     <div className="col-2">
                         <nav className="menu">
-                            <a>home</a>
+                            {/*<div id="fakeMenu">
+                                <Link to="/">Accueil</Link>
+                                <br />
+                                <Link to="/realisations">Réalisations</Link>
+                            </div>*/}
+                            <Link to="/">home</Link>
                             <a>expertises</a>
                             <a>l'agence</a>
-                            <a>réalisations</a>
+                            <Link to="/realisations">réalisations</Link>
                             <a>études de cas</a>
                         </nav>
 

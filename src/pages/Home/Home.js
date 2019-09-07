@@ -10,6 +10,10 @@ import WhatAndForWho from '../../components/WhatAndForWho/WhatAndForWho.js';
 import WorkWithUs from '../../components/WorkWithUs/WorkWithUs.js';
 
 export default class Home extends Component {
+    componentDidMount() {
+        //Pour aller en haut de la page dès qu'on arrive sur celle-ci
+        window.scrollTo(0, 0);
+    }
     render() {
         return (
             <div id="homePage">
