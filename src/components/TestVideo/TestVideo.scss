@@ -19,7 +19,7 @@
   background: #ddd;
   color: black;
 }
-
+/*
 video {
   background-color: silver;
   //background-image: '../../assets/videos/kungfu.mp4';
@@ -28,17 +28,52 @@ video {
   height:100vh;
   object-fit: cover;
 }
+*/
+$size:475px;
 
-.container{
+section{
   border:2px dashed black;
   min-height:30px;
-  .grid{
+  .container{
     border:1px dashed black;
-    width:75%;
+    width:$size*2;
     margin-left:auto;
     margin-right:auto;
     min-height:50px;
     //La solution ce serait peut-être du coup translate plutôt que la sortie de flux
-    transform:translateY(-50%);
+    transform:translateY(-$size/2);
+
+    .grid{
+      .item{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        .video{
+          width:$size;
+          height:$size;
+          video{
+            //border:5px dotted orange;
+            object-fit: cover;
+            width:100%;
+            height:100%;
+          }
+        }
+        .text{
+          width:$size;
+          height:$size;
+          display:flex;
+          align-items: center;
+          justify-content: center;
+          background-color:#DADADA;
+          &:hover{
+            background-color:rgb(202, 202, 202);
+          }
+        }
+      }
+    }
+    .btn-container{
+      .btn{
+
+      }
+    }
   }
 }

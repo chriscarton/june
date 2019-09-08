@@ -16,16 +16,36 @@ export class TestVideo extends Component {
                     id:1,
                     name:'Kung Fu',
                     src:videoSrc1
-                }
+                },
+                {
+                    id: 2,
+                    name: 'Rocket Launching',
+                    src: videoSrc2
+                },
+                {
+                    id: 3,
+                    name: 'Velo',
+                    src: videoSrc3
+                },
             ]
         }
+        this.mouseEnter = this.mouseEnter.bind(this);
+
     }
 
     componentDidMount(){
         let elmnt = document.querySelector('#videoBan');
         elmnt.addEventListener('click',function(e){
-            alert('me');
+            //alert('me');
         });
+    }
+
+    mouseEnter(target){
+        target.play();
+    }
+
+    mouseLeave(target){
+        target.pause();
     }
 
     render() {
@@ -36,10 +56,32 @@ export class TestVideo extends Component {
                         <source src={videoSrc1} type="video/mp4"/>
                         Votre navigateur ne supporte pas la vidéo.
                     </video> */}
+                    
                 </div>
-                <section className="container">
-                    <div className="grid">
-
+                <section>
+                    <div className="container">
+                        <div className="grid">
+                            {this.state.items.map((item) => {
+                                return (
+                                    <div className="item">
+                                        <div className="video">
+                                            {/* Quand ce n'est pas en autoPlay déjà je rame moins */}
+                                            <video 
+                                                muted loop id="myVideo"
+                                                onMouseEnter={(e) => this.mouseEnter(e.target)}
+                                                onMouseLeave={(e) => this.mouseLeave(e.target)}
+                                                >
+                                                <source src={item.src} type="video/mp4" />
+                                                Votre navigateur ne supporte pas la vidéo.
+                                            </video>
+                                        </div>
+                                        <div className="text">
+                                            <h3>{item.name}</h3>
+                                        </div>
+                                    </div>
+                                )
+                            })}
+                        </div>
                     </div>
                 </section>
             </div>
