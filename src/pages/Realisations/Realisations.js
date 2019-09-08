@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import "./Realisations.scss";
 import camera from '../../assets/img/camera.png';
-
+import Portfolio from '../../components/Portfolio/Portfolio.js';
 
 export default class Realisations extends Component {
 
     constructor(props) {
         super(props);
+        /*
+        //Ce ne sont plus les bonnes données
         this.state = {
             entries: [
                 {
@@ -29,6 +31,7 @@ export default class Realisations extends Component {
                 }
             ]
         }
+        */
     }
 
     componentDidMount() {
@@ -36,27 +39,8 @@ export default class Realisations extends Component {
         window.scrollTo(0, 0);
     }
 
-    /*
-
-        //hmmm je vais pas m'emmerder avec ça 
-        //c'est un site vitrine, on sait combien d'élement il va y avoir
-        //on met la height en dur dans le css
-
-    componentDidMount() {
-
-        const entriesElmnt = document.querySelector('.entries');
-        let height = entriesElmnt.offsetHeight;
-
-        console.log(height);
-
-        const portfolioElmnt = document.querySelector('#Portfolio');
-        portfolioElmnt.style.height = height;
-        //console.log;
-        //portfolioElmnt.offsetHeight = height;
-    }
-    */
+  
     render() {
-        const entries = this.state.entries;
         return (
             <div id="Realisations">
                 <div className="ban">
@@ -76,35 +60,7 @@ export default class Realisations extends Component {
                         </div>
                     </div>
                 </div>
-                <div id="Portfolio">
-                    <div className="centered">
-
-                        <div className="entries">
-                            {entries.map((entry) =>
-                                <div className="entry">
-                                    <div className="media">
-
-                                    </div>
-                                    <div className="cartouche">
-                                        <h2>{entry.title}</h2>
-                                        <div>
-                                            {entry.client} <br />
-                                            {entry.video_type}
-                                        </div>
-                                    </div>
-                                </div>
-                            )}
-                            <div className="btn-container">
-                                <a class="btn">
-                                    MORE
-                                </a>
-                            </div>
-                        </div>
-
-                        
-
-                    </div>
-                </div>
+                <Portfolio/>
             </div>
         )
     }

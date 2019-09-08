@@ -2,6 +2,7 @@
   "name": "mrsjune",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://chris-carton.com/mrsjune",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.10.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.22",

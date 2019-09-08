@@ -14,7 +14,9 @@ import Realisations from './pages/Realisations/Realisations.js';
 
 
 
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link, HashRouter } from 'react-router-dom';
+//HashRouter pour essayer de régler le problème de refresh (en production)
+//https://stackoverflow.com/questions/27928372/react-router-urls-dont-work-when-refreshing-or-writing-manually
 
 //import logo from './logo.svg';
 import './App.scss';
@@ -28,20 +30,22 @@ https://skryvets.com/blog/2018/09/20/an-elegant-solution-of-deploying-react-app-
 
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
-      <div className="App">
-        <Header/>
-        <div id="Content">
-          <Switch>
-            <Route path="/" exact component={Home}/>
-            <Route path="/realisations" exact component={Realisations}/>
-            <Route path="/realisations/:id" exact component={Realisations}/>
-            <Route path="/test" component={TestVideo} />
-          </Switch>
+    <HashRouter>
+      <Router basename={process.env.PUBLIC_URL}>
+        <div className="App">
+          <Header/>
+          <div id="Content">
+            <Switch>
+              <Route path="/" exact component={Home}/>
+              <Route path="/realisations" exact component={Realisations}/>
+              <Route path="/realisations/:id" exact component={Realisations}/>
+              <Route path="/test" component={TestVideo} />
+            </Switch>
+          </div>
+          <Footer/>
         </div>
-        <Footer/>
-      </div>
-    </Router>
+      </Router>
+    </HashRouter>
 
       
       

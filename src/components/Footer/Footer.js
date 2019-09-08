@@ -81,6 +81,7 @@ export class Footer extends Component {
                     </div>
                     <div className="col-2">
                         <nav className="menu">
+                            <Link to="/test">test</Link>
                             <Link to="/">home</Link>
                             <a>expertises</a>
                             <a>l'agence</a>

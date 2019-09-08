@@ -1,0 +1,65 @@
+@import '../../variables.scss';
+
+$size:475px;
+
+#Portfolio{
+    background-color:white;
+    //La hauteur totale des carrés plus un ajustement "à la main"
+    min-height:1425+113px;
+    .centered{
+        position:relative;
+        width:$size*2;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .entries{
+        @media screen and (min-height:850px){
+            transform:translateY(-$size/2+50px);
+            /*  
+            position:absolute;
+            top:(-$size/2)+50px;
+            */
+        }
+        .entry{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+                > div{
+                width:$size;
+                height:$size;
+                //border:1px dashed black;
+                display:grid;
+                align-content: center;
+                justify-content: center;
+                &.media{
+                    //background-color:$gray;
+                    //background-image: url(../../assets/img/picture.png);
+                    //background-position:center center;
+                    //background-repeat: no-repeat;
+                    position:relative;
+                    width:$size;
+                    height:$size;
+                    video{
+                        //border:5px dotted orange;
+                        object-fit: cover;
+                        width:$size;
+                        height:$size;
+                    }
+                }
+                &.cartouche{
+                    background-color:$silver;
+                    &:hover{
+                        background-color:darken($silver,5%);
+                    }
+                }
+            }
+        }
+        .btn-container{
+            display:flex;
+            justify-content: center;
+            margin-top:100px;
+            margin-bottom:100px;
+        }
+
+        
+    }
+}

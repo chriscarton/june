@@ -34,6 +34,7 @@ export class TestVideo extends Component {
     }
 
     componentDidMount(){
+        window.scrollTo(0,0);
         let elmnt = document.querySelector('#videoBan');
         elmnt.addEventListener('click',function(e){
             //alert('me');
