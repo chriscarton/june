@@ -43,9 +43,18 @@
                 align-items: center;
                 justify-content: center;
                 min-height:75px;
-                
+                transition:all 0.50s;
+                a{
+                    opacity:0.50;
+                }
                 a:first-child{
                     margin-right:230px;
+                }
+                a:hover{
+                    opacity:1;
+                    box-shadow:none;
+                    background-color:$red-pink;
+                    color:white;
                 }
             }
         }
@@ -64,7 +73,7 @@ $size:475px;
             margin-right:auto;
         }
         .entries{
-            @media screen and (min-height:900px){
+            @media screen and (min-height:850px){
                 position:absolute;
                 top:(-$size/2)+50px;
             }

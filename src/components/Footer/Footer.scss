@@ -12,19 +12,39 @@ footer#Footer{
         position:absolute;
         bottom:0px;
         right:0px;
+        height:474px;
+        img{
+            width:100%;
+            height:auto;
+        }
+    }
+
+    .icon{
+        max-width: 32px;
+        img{
+            width:100%;
+            height:auto;
+        }
+    }
+
+    .icon.phone{
+        img{
+            width:17px;
+            height:32px;
+        }
     }
 
     .grid{
         display:grid;
         grid-template-columns: 2fr 3fr;
-        border:1px dashed white;
+        //border:1px dashed white;
         width:85%;
         margin-left:auto;
         margin-right:auto;
     }
 
     .col-1{
-        border:1px dashed aqua;
+        //border:1px dashed aqua;
         .block{
             p{
                 font-family: 'Montserrat';
@@ -34,11 +54,18 @@ footer#Footer{
         }
     }
     .col-2{
-        border:1px dashed aqua;
+        //border:1px dashed red;
+        display:grid;
+        grid-template-rows: auto 1fr auto;
+
+        .mentions{
+            font-family: 'Montserrat';
+            font-size: 18px;
+        }
     }
 
     .socials{
-        border:1px dashed pink;
+        //border:1px dashed pink;
         display:flex;
         a{
             display:flex;
@@ -49,6 +76,16 @@ footer#Footer{
             align-items: center;
             justify-content: center;
             margin-right:16px;
+            transition:all 0.25s;
+            i{
+                font-size:30px;
+            }
+            &:hover{
+                background-color:white;
+                i{
+                    color:$red-pink;
+                }
+            }
             img{
                 width:100%;
                 height:auto;
@@ -57,7 +94,7 @@ footer#Footer{
     }
     
     .menu{
-        border:1px dashed white;
+        //border:1px dashed white;
         //La Mrs Eaves n'est pas disponible sur Google Fonts, 
         //Je met une vieille georgia en remplacement
         font-family: 'Mrs Eaves OT', 'georgia';
@@ -68,16 +105,25 @@ footer#Footer{
         font-style: italic;
         display:flex;
         justify-content: space-between;
-        border:1px dashed red;
+        //border:1px dashed red;
 
         font-style: italic;
+
+        a{
+            color:white;
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+                cursor:pointer;
+            }
+        }
     }
 
     p.accroche{
         font-size:25px;
         margin-top:96px;
         font-family: 'Montserrat';
-        border:1px solid green;
+        //border:1px solid green;
         a.contact{
             font-family: 'Mrs Eaves OT', 'georgia';
             font-style: italic;

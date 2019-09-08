@@ -2,63 +2,85 @@ import React, { Component } from 'react';
 import './Footer.scss';
 import { Link } from 'react-router-dom';
 
+//Icônes localisation, phone et mail
+import localisation from '../../assets/img/localisation.png';
+import phone from '../../assets/img/phone.png';
+import mail from '../../assets/img/mail.png';
+
 //Icônes socials : 
 import linkedin from '../../assets/img/socials/linkedin.png';
 import vimeo from '../../assets/img/socials/vimeo.png';
 import instagram from '../../assets/img/socials/instagram.png';
 import facebook from '../../assets/img/socials/facebook.png';
 
+//Étiquette
+import logoVertical from '../../assets/img/logo-vertical.png';
+
+
 
 export class Footer extends Component {
+
+    handleHover(e) {
+        e.preventDefault();
+        alert('hover');
+    }
+
     render() {
+        
         return (
             <footer id="Footer">
                 <div className="grid">
                     <div className="col-1">
 
                         <div className="block">
-                            <div className="icon"></div>
+                            <div className="icon localisation">
+                                <img src={localisation} alt="Icône cible"/>
+                            </div>
                             <p>
                                 191, rue des 5 voies <br/>
                                 59200 Tourcoing
                             </p>
                         </div>
                         <div className="block">
-                            <div className="icon"></div>
+                            <div className="icon phone">
+                                <img src={phone} alt="Icône téléphone portable"/>
+                            </div>
                             <p>
                                 03 20 20 94 32
                             </p>
                         </div>
                         <div className="block">
-                            <div className="icon"></div>
+                            <div className="icon mail">
+                                <img src={mail} alt="Icône avion en papier"/>
+                            </div>
                             <p>
                                 hello(at)mrsjune.fr
                             </p>
                         </div>
 
                         <div className="socials">
-                            <a>
-                                <img src={linkedin}/>
+                            <a onHover={this.handleHover}>
+                                {/* <img src={linkedin}/> */}
+                                <i class="fab fa-linkedin-in"></i>
                             </a>
                             <a>
-                                <img src={vimeo} />
+                                {/* <img src={vimeo} /> */}
+
+                                <i class="fab fa-vimeo-v"></i>
                             </a>
                             <a>
-                                <img src={instagram} />
+                                {/* <img src={instagram} /> */}
+                                <i class="fab fa-instagram"></i>
                             </a>
                             <a>
-                                <img src={facebook} />
+                                {/* <img src={facebook} /> */}
+                                <i class="fab fa-facebook-f"></i>
                             </a>
                         </div>
 
                     </div>
                     <div className="col-2">
                         <nav className="menu">
-                            {/*<div id="fakeMenu">
-                                <Link to="/">Accueil</Link>
-                                <br />
-                                <Link to="/realisations">Réalisations</Link>
-                            </div>*/}
                             <Link to="/">home</Link>
                             <a>expertises</a>
                             <a>l'agence</a>
@@ -76,7 +98,7 @@ export class Footer extends Component {
                         </div>
                     </div>
                     <div className="etiquette">
-                        (logo ici vertical Mrs June)
+                        <img src={logoVertical} alt="Logo Mrs June"/>
                     </div>
                 </div>
             </footer>

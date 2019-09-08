@@ -9,21 +9,6 @@
   position:absolute;
 }
 
-#fakeMenu{
-  position:absolute;
-  border:2px dashed white;
-  a{
-    color:aqua;
-  }
-}
-
-
-
-/* 
-  Ceci est nouveau avec l'intégration de la page "Réalisations" 
-*/
-
-//Peut-être mettre ceci dans App.scss du coup...
 .btn{
     width:260px;
     height:101px;
@@ -36,5 +21,13 @@
     text-align: center;
     font-family: 'Montserrat';
     font-size:37px;
+    transition:all 0.25s;
+    &:hover{
+      background-color:white;
+      color:$red-pink;
+      box-shadow: 0px 0px 50px #EF282C4D;
+      cursor:pointer;
+    }
 }
 
+ a:active, a:focus{ outline:none; }

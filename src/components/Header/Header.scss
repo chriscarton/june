@@ -6,13 +6,9 @@
         position:absolute;
         z-index:1;
         height:140px;
-        //border-bottom:1px dashed white;
         display:flex;
         align-items: center;
         .logo{
-            //hmm j'ai vu ça sur la maquette
-            //Mais finalement, on va centrer par rapport au menu sur la droite
-            //padding-top:68px;
             img{
                 max-width: 260px;
             }

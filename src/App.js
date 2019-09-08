@@ -5,6 +5,9 @@ import Menu from './components/Menu/Menu.js';
 import Header from './components/Header/Header.js';
 import Footer from './components/Footer/Footer.js';
 
+//Un petit composant pour voir comment se comportent les vidéos
+import TestVideo from './components/TestVideo/TestVideo.js';
+
 //Importation des pages
 import Home from './pages/Home/Home.js';
 import Realisations from './pages/Realisations/Realisations.js';
@@ -33,6 +36,7 @@ https://skryvets.com/blog/2018/09/20/an-elegant-solution-of-deploying-react-app-
             <Route path="/" exact component={Home}/>
             <Route path="/realisations" exact component={Realisations}/>
             <Route path="/realisations/:id" exact component={Realisations}/>
+            <Route path="/test" component={TestVideo} />
           </Switch>
         </div>
         <Footer/>
