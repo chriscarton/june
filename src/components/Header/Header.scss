@@ -2,6 +2,8 @@
     width:85%;
     margin-left:auto;
     margin-right:auto;
+    position:relative;
+    z-index:2;
     .header{
         position:absolute;
         z-index:1;

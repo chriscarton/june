@@ -59,29 +59,24 @@ export class Footer extends Component {
                         </div>
 
                         <div className="socials">
-                            <a onHover={this.handleHover}>
-                                {/* <img src={linkedin}/> */}
-                                <i class="fab fa-linkedin-in"></i>
+                            <a>
+                                <i className="fab fa-linkedin-in"></i>
                             </a>
                             <a>
-                                {/* <img src={vimeo} /> */}
-
-                                <i class="fab fa-vimeo-v"></i>
+                                <i className="fab fa-vimeo-v"></i>
                             </a>
                             <a>
-                                {/* <img src={instagram} /> */}
-                                <i class="fab fa-instagram"></i>
+                                <i className="fab fa-instagram"></i>
                             </a>
                             <a>
-                                {/* <img src={facebook} /> */}
-                                <i class="fab fa-facebook-f"></i>
+                                <i className="fab fa-facebook-f"></i>
                             </a>
                         </div>
 
                     </div>
                     <div className="col-2">
                         <nav className="menu">
-                            <Link to="/test">test</Link>
+                            {/* <Link to="/test">test</Link> */}
                             <Link to="/">home</Link>
                             <a>expertises</a>
                             <a>l'agence</a>

@@ -1,47 +1,19 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Portfolio.scss';
-/*
-import videoSrc1 from '../../assets/videos/kungfu.mp4';
-import videoSrc2 from '../../assets/videos/rocket_launching.mp4';
-import videoSrc3 from '../../assets/videos/velo.mp4';
-*/
 
-//On va passer aux vraies videos (en petite résolution...)
-import videoSrc1 from '../../assets/videos/projets/le-pas-de-calais.mp4';
-import videoSrc2 from '../../assets/videos/projets/sgi-dec-corporate.mp4';
-import videoSrc3 from '../../assets/videos/projets/deux-caps-survol.mp4';
-
+import items from './items.js';
 
 export class Portfolio extends Component {
 
     constructor(props) {
         super(props);
-        
         this.state = {
-            items: [
-                {
-                    id: 1,
-                    name: 'Le Pas de Calais',
-                    client: '',
-                    video_type: '', 
-                    src: videoSrc1
-                },
-                {
-                    id: 2,
-                    name: 'SGI DEC CORPORATE',
-                    client: '',
-                    video_type: '',
-                    src: videoSrc2
-                },
-                {
-                    id: 3,
-                    name: 'Deux Caps Survol',
-                    client: '',
-                    video_type: '',
-                    src: videoSrc3
-                },
-            ]
+            items: items
         }
+
+        //avec la notation que j'utilise je ne sais pas si ceci est nécessaire
+
         this.mouseEnter = this.mouseEnter.bind(this);
         this.mouseLeave = this.mouseLeave.bind(this);
 
@@ -55,38 +27,67 @@ export class Portfolio extends Component {
         target.pause();
     }
 
+    hideLoader(target){
+        let parent = target.parentNode;
+        let loader = parent.querySelector('.loader');
+        loader.style.display = 'none';
+    }
+
+    handleClick(target){
+        let grand_parent = target.parentNode.parentNode;
+
+        let arrowLink = grand_parent.querySelector('.arrow-link');
+        
+        arrowLink.click();
+        //Et là ben il faut aller vers le lien...
+    }
+
     render() {
-        const items = this.state.items;
+
+        //showing == 'brand' || 'event'
+        let showing = this.props.showing;
+        let items = this.state.items.filter(item => item.cat == showing);
 
         return (
             <div id="Portfolio">
-                
                 <div className="centered">
 
                     <div className="entries">
                         {items.map((item) =>
-                            <div className="entry">
+                            <div 
+                                key={item.id} 
+                                className="entry" 
+                                onClick={(e)=>this.handleClick(e.target)}
+                                >
                                 <div className="media">
+                                    <div className="loader">
+                                        <i className="fas fa-circle-notch fa-spin"></i>
+                                    </div>
                                     <video
-                                        muted loop id="myVideo"
+                                        muted loop 
+                                        className="media-video"
                                         onMouseEnter={(e) => this.mouseEnter(e.target)}
                                         onMouseLeave={(e) => this.mouseLeave(e.target)}
+                                        onLoadedData={(e) => this.hideLoader(e.target)}
                                     >
                                         <source src={item.src} type="video/mp4" />
                                         Votre navigateur ne supporte pas la vidéo.
                                     </video>
                                 </div>
                                 <div className="cartouche">
-                                    <h2>{item.name}</h2>
-                                    <div>
+                                    <h2 className="title">{item.name}</h2>
+                                    <div className="infos">
                                         {item.client} <br />
-                                        {item.video_type}
+                                        {item.cat}
+                                    </div>
+                                    <div className="arrow-icon">
+                                        <Link className="arrow-link" to={`/realisation/${item.id}`}>-></Link>
                                     </div>
                                 </div>
                             </div>
                         )}
                         <div className="btn-container">
-                            <a class="btn">
+                            <a className="btn">
                                 MORE
                                 </a>
                         </div>
