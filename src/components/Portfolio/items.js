@@ -1,9 +1,9 @@
-import videoSrc1 from '../../assets/videos/projets/30s/le-pas-de-calais_cut.mp4';
-import videoSrc2 from '../../assets/videos/projets/30s/sgi-dec-corporate_cut.mp4';
-import videoSrc3 from '../../assets/videos/projets/30s/deux-caps-survol_cut.mp4';
-import videoSrc4 from '../../assets/videos/projets/30s/mapping_cut.mp4';
-import videoSrc5 from '../../assets/videos/projets/30s/concierge-uber_cut.mp4';
-import videoSrc6 from '../../assets/videos/projets/30s/shakespeare_cut.mp4';
+import videoSrc1 from '../../assets/videos/projets/hd/le-pas-de-calais.mp4';
+import videoSrc2 from '../../assets/videos/projets/hd/sgi-dec-corporate.mp4';
+import videoSrc3 from '../../assets/videos/projets/hd/deux-caps-survol.mp4';
+import videoSrc4 from '../../assets/videos/projets/hd/mapping.mp4';
+import videoSrc5 from '../../assets/videos/projets/hd/concierge-uber.mp4';
+import videoSrc6 from '../../assets/videos/projets/hd/shakespeare.mp4';
 
 
 let items = [

@@ -1,0 +1,13 @@
+#SvgArrow{
+    width:32px;
+    height:32px;
+    #horizontalLine, #verticalLine{
+        fill:none;
+        stroke:black;
+        stroke-width:2px;
+    }
+    polyline{
+        stroke:black;
+        stroke-width:2px;
+    }
+}

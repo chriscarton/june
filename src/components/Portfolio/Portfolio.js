@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Portfolio.scss';
+import SvgArrow from '../SvgArrow/SvgArrow.js';
+
+import camera from '../../assets/img/camera.png';
 
 import items from './items.js';
 
@@ -33,13 +36,24 @@ export class Portfolio extends Component {
         loader.style.display = 'none';
     }
 
+    handleMouseEnter(target) {
+        let grand_parent = target.parentNode.parentNode;
+
+        let svg = grand_parent.querySelector('svg');
+        svg.getElementById('arrowLine')
+            .beginElement();
+
+        setTimeout('document.getElementById(\'arrowLine\').beginElement()', 150);
+    }
+
     handleClick(target){
         let grand_parent = target.parentNode.parentNode;
 
-        let arrowLink = grand_parent.querySelector('.arrow-link');
         
+
+
+        let arrowLink = grand_parent.querySelector('.arrow-link');
         arrowLink.click();
-        //Et là ben il faut aller vers le lien...
     }
 
     render() {
@@ -58,10 +72,12 @@ export class Portfolio extends Component {
                                 key={item.id} 
                                 className="entry" 
                                 onClick={(e)=>this.handleClick(e.target)}
+                                onMouseEnter={(e) => this.handleMouseEnter(e.target)}
+
                                 >
                                 <div className="media">
                                     <div className="loader">
-                                        <i className="fas fa-circle-notch fa-spin"></i>
+                                        <img src={camera} alt="Iĉone chargement"/>
                                     </div>
                                     <video
                                         muted loop 
@@ -81,7 +97,9 @@ export class Portfolio extends Component {
                                         {item.cat}
                                     </div>
                                     <div className="arrow-icon">
-                                        <Link className="arrow-link" to={`/realisation/${item.id}`}>-></Link>
+                                        <Link className="arrow-link" to={`/realisation/${item.id}`}>
+                                            <SvgArrow/>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

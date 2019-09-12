@@ -5,10 +5,6 @@
   box-sizing: border-box;
 }
 
-html{
-  scroll-behavior: smooth;
-}
-
 #Logo{
   position:absolute;
 }
@@ -35,3 +31,15 @@ html{
 }
 
  a:active, a:focus{ outline:none; }
+
+@keyframes cameraBlink{
+    0%{
+        opacity:0;
+    }
+    80%{
+        opacity:1;
+    }
+    100%{
+        opacity:1;
+    }
+}

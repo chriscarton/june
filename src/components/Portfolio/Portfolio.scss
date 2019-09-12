@@ -13,6 +13,9 @@ $size:475px;
         margin-right:auto;
     }
     .entries{
+        @media screen and (min-height:500px){
+            transform:translateY(-50px);
+        }
         @media screen and (min-height:850px){
             transform:translateY(-$size/2+50px);
             /*  
@@ -50,9 +53,11 @@ $size:475px;
                         &.fade-out{
                             opacity:0;
                         }
-                        i{
-                            font-size:35px;
-                            color:$red-pink;
+                        img{
+                            animation:cameraBlink;
+                            animation-delay:1.5s;
+                            animation-duration:1.5s;
+                            animation-iteration-count: infinite;
                         }
                     }
                     video{
@@ -83,7 +88,6 @@ $size:475px;
                         position:absolute;
                         right:66px;
                         bottom:96px;
-                        border:1px dashed green;
                     }
                 }
             }

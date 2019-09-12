@@ -13,7 +13,6 @@ import Home from './pages/Home/Home.js';
 import Realisations from './pages/Realisations/Realisations.js';
 import Realisation from './pages/Realisation/Realisation.js';
 
-
 //Composant NotFound
 import NotFound from './components/NotFound/NotFound.js';
 
@@ -22,7 +21,6 @@ import { BrowserRouter as Router, Switch, Route, Link, HashRouter } from 'react-
 //HashRouter pour essayer de régler le problème de refresh (en production)
 //https://stackoverflow.com/questions/27928372/react-router-urls-dont-work-when-refreshing-or-writing-manually
 
-//import logo from './logo.svg';
 import './App.scss';
 
 function App() {

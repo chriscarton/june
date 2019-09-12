@@ -7,12 +7,6 @@ import localisation from '../../assets/img/localisation.png';
 import phone from '../../assets/img/phone.png';
 import mail from '../../assets/img/mail.png';
 
-//Icônes socials : 
-import linkedin from '../../assets/img/socials/linkedin.png';
-import vimeo from '../../assets/img/socials/vimeo.png';
-import instagram from '../../assets/img/socials/instagram.png';
-import facebook from '../../assets/img/socials/facebook.png';
-
 //Étiquette
 import logoVertical from '../../assets/img/logo-vertical.png';
 

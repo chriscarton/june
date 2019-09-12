@@ -14,7 +14,6 @@ export default class Realisations extends Component {
     }
 
     componentDidMount() {
-        //Pour aller en haut de la page dès qu'on arrive sur celle-ci
         window.scrollTo(0, 0);
     }
 
@@ -22,11 +21,14 @@ export default class Realisations extends Component {
         let portfolio = document.querySelector('#Portfolio');
         console.log(portfolio);
         let y = portfolio.offsetTop-145;
-        window.scrollTo(0,y);
+        window.scroll({
+            top: y,
+            left: 0,
+            behavior: 'smooth'
+        });
     }
 
     filterBrand(e){
-        //alert('Brand!');
         this.switchActiveClass(e.target);
         this.setState({showing:'brand'});
         this.scrollToPortfolio();
@@ -43,13 +45,11 @@ export default class Realisations extends Component {
         this.switchActiveClass(e.target);
         this.setState({ showing: 'event' });
         this.scrollToPortfolio();
-        //Rendu conditionnel de Portfolio avec une props ???
     }
 
     hideCameraIcon(){
         let ban = document.querySelector('.ban');
         let camera_container = ban.querySelector('.camera-container');
-        //ceci fonctionne
         camera_container.classList.add('disapear');
     }
 
@@ -57,18 +57,16 @@ export default class Realisations extends Component {
     render() {
         return (
             <div id="Realisations">
+                
                 <div className="ban">
-
                     <video
                         autoPlay muted loop
                         className="media-video"
                         onLoadedData={(e) => this.hideCameraIcon()}
-
                     >
                         <source src={banVideo} type="video/mp4" />
                         Votre navigateur ne supporte pas la vidéo.
                     </video>
-
                     <div className="content">
                         <div className="encart">
                             <h1>Nos réalisations</h1>
